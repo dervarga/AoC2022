@@ -42,6 +42,8 @@ def camp_cleanup():
             is_intersected = intersected_a or intersected_b
 
             is_overlapped = a1_end_num >= a2_start_num and a1_start_num <= a2_end_num
+            # is_overlapped = a1_set & a2_set
+            # is_overlapped = len(a1_set.intersection(a2_set)) > 0
 
             if is_intersected:
                 intersected += 1
